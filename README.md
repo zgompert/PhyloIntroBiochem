@@ -38,6 +38,8 @@ Avoid:
 
 NCBI has simple tools for viewing a sequence alignment (MSA viewer) and making a tree from your results. You can check these out but we will not use them as our final product.
 
+Another option is to search for sequences on the NCBI protein database: [https://www.ncbi.nlm.nih.gov/protein](https://www.ncbi.nlm.nih.gov/protein).
+
 ## Analysis
 
 We will use R to align the DNA sequences and estimate the phylogeny. Install the following R packages.
