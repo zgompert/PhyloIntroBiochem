@@ -19,7 +19,7 @@ Begin by obtaining additional DNA sequences from NCBI.
 4. Select **Uncultured/environmental sample sequences** to reduce noise
 5. Choose megablast, discontiguous megablast or blastn 
 
-Select a subset of sequences to use. Download the sequences as a fasta file. You can edit the headers in your fasta file to have more managable names downstream. Here is an example: [dseqs.fasta](https://github.com/user-attachments/files/25432277/dseqs.txt)
+Select a subset of sequences to analyze and download them as a FASTA file. You may wish to edit the headers in the FASTA file to use more manageable names for downstream analyses. Here is an example: [dseqs.fasta](https://github.com/user-attachments/files/25432277/dseqs.txt)
 
 
 Keep sequences that:
