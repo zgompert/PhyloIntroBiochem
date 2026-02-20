@@ -7,8 +7,7 @@ This exercise uses NCBI for sequence retrieval plus R for alignment and maximum-
 Mini-lecture slides
 
 ## Data
-
-This assumes you have DNA sequence data from a gene and organism of interest in a fasta file, and that you want to estimate of phylogeny centered on this gene and species. Such a phylogeny could include the same gene in additional species or populations or other members of the same gene family or both. In this example, I am starting with an opsin gene from *Drosophila melanogaster* (for arbitrary reasons). 
+This assumes that you have DNA sequence data for a gene and organism of interest in a FASTA file, and that you want to estimate a phylogeny centered on this gene and species. Such a phylogeny could include the same gene from additional species or populations, other members of the same gene family, or both. In this example, I begin with an opsin gene from *Drosophila melanogaster* (chosen arbitrarily).
 
 [DmelOpsin.fasta](https://github.com/user-attachments/files/25432149/sequence.txt)
 
