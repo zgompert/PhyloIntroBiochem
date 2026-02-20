@@ -59,7 +59,7 @@ library("ape")
 library("phangorn")
 
 ## read in the sequence data
-fa<-readDNAStringSet("Downloads/seqs.txt")
+fa<-readDNAStringSet("Downloads/dseqs.txt")
 fa
 width(fa)
 
@@ -68,4 +68,44 @@ aln<-AlignSeqs(fa)
 aln_mat <- as.matrix(aln)
 phydat <- phyDat(aln_mat, type = "DNA")
 phydat
+```
+
+We will start with a simple neighbor-joining tree. We will use this a starting point to optimize a maximum likelihood tree.
+
+```r
+## calcualte the distance matrix, uses JC69 by default
+dm <- dist.ml(phydat)
+## make the NJ tree
+tree_nj <- NJ(dm)
+
+## ML fit, optimize under GTR
+## we could use other models or try model selection
+fit <- pml(tree_nj, data = phydat)
+fit_gtr <- optim.pml(fit,
+  model = "GTR",
+  rearrangement = "stochastic",
+  control = pml.control(trace = 0)
+)
+## plot the tree
+## this should have approximate SH-like (aLRT) branch support
+plot(fit_gtr)
+```
+You can also generate bootstrap support values
+
+```r
+bs <- bootstrap.pml(fit_gtr, bs = 100, optNni = TRUE, control = pml.control(trace = 0))
+
+## pot with bootstrap labels (>= 50%)
+tree_bs <- plotBS(fit_gtr$tree, bs, p = 50, type = "phylogram")
+plot(tree_bs)
+```
+We can compare alternative models.
+```r
+## model testing
+modelTest(phydat)
+```
+
+And we can reroot the tree
+```r
+root(tree, outgroup="ACCESSION", resolve.root=TRUE)
 ```
