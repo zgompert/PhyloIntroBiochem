@@ -10,7 +10,7 @@ Mini-lecture slides
 
 This assumes you have the DNA sequence from a gene and organism of interest in a fasta file, and that you want to estimate of phylogeny centered on this gene and species. Such a phylogeny could include the same gene in additional species or populations or other members of the same gene family or both. In this example, I am starting with an opsin gene from *Drosophila melanogaster* (for arbitrary reasons). 
 
-file
+[DmelOpsin.fasta](https://github.com/user-attachments/files/25432149/sequence.txt)
 
 We begin by obtaining additional DNA sequences from NCBI.
 
@@ -20,13 +20,14 @@ We begin by obtaining additional DNA sequences from NCBI.
 4. Select *Uncultured/environmental sample sequences* to reduce noise
 
 Select a subset of sequences to use.
+
 Keep sequences that:
 
 - match the same gene name in the annotation (or obvious homolog)
 
 - are similar length (avoid very short fragments if possible)
 
-- come from different species (avoid redundant same-species entries)
+- come from species of interest; you might or might not want multiple representatives of the same species
 
 Avoid:
 
