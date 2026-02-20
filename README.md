@@ -2,9 +2,38 @@
 
 Hands-on introduction to phylogenetics (for USU Biochem students)
 
+This exercise uses NCBI for sequence retrieval plus R for alignment and maximum-likelihood phylogenetics.
+
 Mini-lecture slides
 
 ## Data
+
+This assumes you have the DNA sequence from a gene and organism of interest in a fasta file, and that you want to estimate of phylogeny centered on this gene and species. Such a phylogeny could include the same gene in additional species or populations or other members of the same gene family or both. In this example, I am starting with an opsin gene from *Drosophila melanogaster* (for arbitrary reasons). 
+
+file
+
+We begin by obtaining additional DNA sequences from NCBI.
+
+1. Navigate to the NCBI nucleotide blast page: [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome). (You can use blastp if you have amino acide data)
+2. Enter (paste) the contents of your fasta file under **Enter Query Sequence**.
+3. Chose the **Core nucelotide database** and set the Organism field to limit your search. I used Drosophilidae (taxid: 7214).
+4. Select *Uncultured/environmental sample sequences* to reduce noise
+
+Select a subset of sequences to use.
+Keep sequences that:
+
+- match the same gene name in the annotation (or obvious homolog)
+
+- are similar length (avoid very short fragments if possible)
+
+- come from different species (avoid redundant same-species entries)
+
+Avoid:
+
+- "partial" sequences that are extremely short
+
+- records with unclear gene identity
+
 
 ## Analysis
 
