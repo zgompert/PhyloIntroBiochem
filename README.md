@@ -8,7 +8,7 @@ Mini-lecture slides
 
 ## Data
 
-This assumes you have the DNA sequence from a gene and organism of interest in a fasta file, and that you want to estimate of phylogeny centered on this gene and species. Such a phylogeny could include the same gene in additional species or populations or other members of the same gene family or both. In this example, I am starting with an opsin gene from *Drosophila melanogaster* (for arbitrary reasons). 
+This assumes you have DNA sequence data from a gene and organism of interest in a fasta file, and that you want to estimate of phylogeny centered on this gene and species. Such a phylogeny could include the same gene in additional species or populations or other members of the same gene family or both. In this example, I am starting with an opsin gene from *Drosophila melanogaster* (for arbitrary reasons). 
 
 [DmelOpsin.fasta](https://github.com/user-attachments/files/25432149/sequence.txt)
 
