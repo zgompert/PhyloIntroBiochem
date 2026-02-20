@@ -41,11 +41,31 @@ NCBI has simple tools for viewing a sequence alignment (MSA viewer) and making a
 
 ## Analysis
 
-Install the following R packages.
+We will use R to align the DNA sequences and estimate the phylogeny. Install the following R packages.
 
 ```r
 install.packages("ape")
 install.packages("phangorn")
 install.packages("BiocManager")
 BiocManager::install("DECIPHER")
+```
+
+Now lets align the sequences. We will use the R package `DECIPHER`. [MUSCLE](https://www.ebi.ac.uk/jdispatcher/msa/muscle) and [ClustalW](https://www.genome.jp/tools-bin/clustalw) are other options.
+
+```r
+## load libraries
+library("DECIPHER")
+library("ape")
+library("phangorn")
+
+## read in the sequence data
+fa<-readDNAStringSet("Downloads/seqs.txt")
+fa
+width(fa)
+
+## align the sequences
+aln<-AlignSeqs(fa)
+aln_mat <- as.matrix(aln)
+phydat <- phyDat(aln_mat, type = "DNA")
+phydat
 ```
