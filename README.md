@@ -112,4 +112,4 @@ rt<-root(fit_gtr$tree, outgroup="Drosophila affinis", resolve.root=TRUE)
 plot(rt)
 ```
 
-Here is the full script.
+Here is the full script: [commands.R](commands.R).
