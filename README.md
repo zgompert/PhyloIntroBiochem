@@ -11,7 +11,7 @@ This assumes that you have DNA sequence data for a gene and organism of interest
 
 [DmelOpsin.fasta](https://github.com/user-attachments/files/25432149/sequence.txt)
 
-We begin by obtaining additional DNA sequences from NCBI.
+Begin by obtaining additional DNA sequences from NCBI.
 
 1. Navigate to the NCBI nucleotide blast page: [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome). (You can use blastp if you have amino acide data)
 2. Enter (paste) the contents of your fasta file under **Enter Query Sequence**.
