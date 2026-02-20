@@ -101,10 +101,10 @@ plot(tree_bs,show.node.label=TRUE)
 We can compare alternative models.
 ```r
 ## model testing
-modelTest(phydat)
+mo<-modelTest(phydat)
 ```
+And we can reroot the tree. My root choice here is arbitrary.
 
-And we can reroot the tree
 ```r
-root(tree, outgroup="ACCESSION", resolve.root=TRUE)
+rt<-root(tree, outgroup="Drosophila affinis", resolve.root=TRUE)
 ```
