@@ -4,7 +4,7 @@ Hands-on introduction to phylogenetics (for USU Biochem students)
 
 This exercise uses NCBI for sequence retrieval plus R for alignment and maximum-likelihood phylogenetics.
 
-Mini-lecture slides
+[Mini-lecture slides](https://drive.google.com/file/d/1SGU79gSFQ90Fo7SBIyy6O6JiSkyDEhA4/view?usp=sharing)
 
 ## Data
 This assumes that you have DNA sequence data for a gene and organism of interest in a FASTA file, and that you want to estimate a phylogeny centered on this gene and species. Such a phylogeny could include the same gene from additional species or populations, other members of the same gene family, or both. In this example, I begin with an opsin gene from *Drosophila melanogaster* (chosen arbitrarily).
