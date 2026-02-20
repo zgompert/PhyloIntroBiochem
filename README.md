@@ -102,6 +102,8 @@ We can compare alternative models.
 ```r
 ## model testing
 mo<-modelTest(phydat)
+## extract the best model
+as.pml(mo)
 ```
 And we can reroot the tree. My root choice here is arbitrary.
 
