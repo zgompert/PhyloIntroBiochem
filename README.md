@@ -16,10 +16,12 @@ We begin by obtaining additional DNA sequences from NCBI.
 
 1. Navigate to the NCBI nucleotide blast page: [blastn](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome). (You can use blastp if you have amino acide data)
 2. Enter (paste) the contents of your fasta file under **Enter Query Sequence**.
-3. Chose the **Core nucelotide database** and set the Organism field to limit your search. I used Drosophilidae (taxid: 7214).
-4. Select *Uncultured/environmental sample sequences* to reduce noise
+3. Choose the **Core nucelotide database** and set the Organism field to limit your search. I used Drosophilidae (taxid: 7214).
+4. Select **Uncultured/environmental sample sequences** to reduce noise
+5. Choose megablast, discontiguous megablast or blastn 
 
-Select a subset of sequences to use.
+Select a subset of sequences to use. Download the sequences as a fasta file. You can edit the headers in your fasta file to have more managable names downstream. Here is an example: [dseqs.fasta](https://github.com/user-attachments/files/25432277/dseqs.txt)
+
 
 Keep sequences that:
 
@@ -35,6 +37,7 @@ Avoid:
 
 - records with unclear gene identity
 
+NCBI has simple tools for viewing a sequence alignment (MSA viewer) and making a tree from your results. You can check these out but we will not use them as our final product.
 
 ## Analysis
 
