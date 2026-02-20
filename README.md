@@ -96,7 +96,7 @@ bs <- bootstrap.pml(fit_gtr, bs = 100, optNni = TRUE, control = pml.control(trac
 
 ## pot with bootstrap labels (>= 50%)
 tree_bs <- plotBS(fit_gtr$tree, bs, p = 50, type = "phylogram")
-plot(tree_bs)
+plot(tree_bs,show.node.label=TRUE)
 ```
 We can compare alternative models.
 ```r
