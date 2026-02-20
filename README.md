@@ -108,5 +108,8 @@ as.pml(mo)
 And we can reroot the tree. My root choice here is arbitrary.
 
 ```r
-rt<-root(tree, outgroup="Drosophila affinis", resolve.root=TRUE)
+rt<-root(fit_gtr$tree, outgroup="Drosophila affinis", resolve.root=TRUE)
+plot(rt)
 ```
+
+Here is the full script.
